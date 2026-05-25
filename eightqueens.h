@@ -8,6 +8,7 @@
 
 #define SIZE 8
 
+void startboard (int board[]);
 bool checkposition (int board[], int line, int column);
 
 #endif
