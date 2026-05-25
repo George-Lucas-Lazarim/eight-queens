@@ -4,5 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
+
+#define SIZE 8
+
+bool checkposition (int board[], int line, int column);
 
 #endif
