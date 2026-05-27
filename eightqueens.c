@@ -34,7 +34,7 @@ void printboard (int board[]) {
 void solvequeens (int board[], int column) {
     if (column == SIZE) {
         totalsolutions++;
-        printf("\n--- solution %d ---\n", totalsolutions);
+        printf("\nSolution %d\n", totalsolutions);
         printboard(board);
         return;
     }
@@ -45,4 +45,22 @@ void solvequeens (int board[], int column) {
             solvequeens(board, column + 1);
         }
     }
+}
+
+bool solveonequeens (int board[], int column) {
+    if (column == SIZE) {
+        printf("\nSolution\n");
+        printboard(board);
+        return true;
+    }
+
+    for (int i = 0; i < SIZE; i++) {
+        if (checkposition(board, i, column)) {
+            board[column] = i;
+
+            if (solveonequeens(board, column + 1)) return true;
+        }
+    }
+    
+    return false;
 }
