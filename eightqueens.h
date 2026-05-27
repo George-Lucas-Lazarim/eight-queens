@@ -9,6 +9,7 @@ extern int totalsolutions;
 
 void startboard (int board[]);
 bool checkposition (int board[], int line, int column);
-void solvequeens (int board[]);
+void printboard (int board[]);
+void solvequeens (int board[], int column);
 
 #endif

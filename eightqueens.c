@@ -21,11 +21,21 @@ bool checkposition (int board[], int line, int column) {
     return true;
 }
 
+void printboard (int board[]) {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            if (board[j] == i) printf(" Q ");
+            else printf(" - ");
+        }
+        printf("\n");
+    }
+}
+
 void solvequeens (int board[], int column) {
     if (column == SIZE) {
         totalsolutions++;
         printf("\n--- solution %d ---\n", totalsolutions);
-        //printtable!!!
+        printboard(board);
         return;
     }
     
